@@ -11,5 +11,5 @@ package com.wiseassblog.kotlincalculator.data.datamodel
  * The Parenthesis whcih follow the Class name, essentially act as a Constructor.
  * Created by R_KAY on 1/20/2018.
  */
-data class ExpressionDataModel(val value:String,
-                               val isValid:Boolean)
+data class ExpressionDataModel(val value: String,
+                               val isValid: Boolean)

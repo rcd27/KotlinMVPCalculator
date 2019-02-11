@@ -11,7 +11,7 @@ package com.wiseassblog.kotlincalculator.domain.domainmodel
  */
 class Expression private constructor(var result: String,
                                      var successful: Boolean) {
-    companion object Factory{
+    companion object Factory {
         fun createSuccessModel(result: String): Expression {
             return Expression(result,
                     true)

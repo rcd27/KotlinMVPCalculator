@@ -6,7 +6,6 @@ import com.wiseassblog.kotlincalculator.data.datamodel.OperandDataModel
 import com.wiseassblog.kotlincalculator.data.datamodel.OperatorDataModel
 import com.wiseassblog.kotlincalculator.domain.repository.ICalculator
 import io.reactivex.Flowable
-import java.lang.IllegalArgumentException
 
 /**
  * Created by R_KAY on 12/21/2017.
@@ -94,5 +93,4 @@ object CalculatorImpl : ICalculator {
         }
         throw  IllegalArgumentException("Illegal Operator.")
     }
-
 }

@@ -15,12 +15,11 @@ import com.wiseassblog.kotlincalculator.viewmodel.CalculatorViewModel
  * Basic DI implementation.
  * Created by R_KAY on 1/28/2018.
  */
-class Injector(private var activity:AppCompatActivity) {
+class Injector(private var activity: AppCompatActivity) {
 
     private var validator: ValidatorImpl = ValidatorImpl
     private var calculator: CalculatorImpl = CalculatorImpl
     private var schedulerProvider: SchedulerProviderImpl = SchedulerProviderImpl
-
 
     fun providePresenter(view: CalculatorFragment): IViewContract.Presenter {
         return CalculatorPresenter(

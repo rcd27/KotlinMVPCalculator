@@ -38,7 +38,7 @@ class CalculatorViewModel(private val data: Expression
      * Step 2 in simpler language: When we give data to the ViewModel, we want the ViewModel to give
      * a copy of that new data to the Presenter instantly. This is better than having the Presenter
      * constantly ask it for the value.
-     vi*
+    vi*
      */
     override fun setDisplayState(result: String) {
         this.data.result = result

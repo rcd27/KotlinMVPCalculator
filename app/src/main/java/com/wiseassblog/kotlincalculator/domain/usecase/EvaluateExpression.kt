@@ -8,7 +8,6 @@ import com.wiseassblog.kotlincalculator.util.error.ValidationException
 import com.wiseassblog.kotlincalculator.util.scheduler.BaseSchedulerProvider
 import io.reactivex.Flowable
 
-
 /**
  * Created by R_KAY on 12/20/2017.
  */

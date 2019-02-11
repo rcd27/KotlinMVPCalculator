@@ -1,9 +1,9 @@
 package com.wiseassblog.kotlincalculator.presenter
 
+import com.wiseassblog.kotlincalculator.domain.domainmodel.Expression
 import com.wiseassblog.kotlincalculator.domain.usecase.EvaluateExpression
 import com.wiseassblog.kotlincalculator.util.scheduler.BaseSchedulerProvider
 import com.wiseassblog.kotlincalculator.view.IViewContract
-import com.wiseassblog.kotlincalculator.domain.domainmodel.Expression
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.subscribers.DisposableSubscriber
 

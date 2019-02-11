@@ -19,8 +19,8 @@ object ValidatorImpl : IValidator {
         return true
     }
 
-    private fun invalidEnd(expression: String):Boolean {
-         when {
+    private fun invalidEnd(expression: String): Boolean {
+        when {
             expression.endsWith("+") -> return true
             expression.endsWith("-") -> return true
             expression.endsWith("*") -> return true
@@ -30,7 +30,7 @@ object ValidatorImpl : IValidator {
         }
     }
 
-    private fun invalidStart(expression: String):Boolean {
+    private fun invalidStart(expression: String): Boolean {
         when {
             expression.startsWith("+") -> return true
             expression.startsWith("-") -> return true
@@ -55,7 +55,7 @@ object ValidatorImpl : IValidator {
     }
 
     private fun isConcurrentDecimal(current: Char, next: Char): Boolean {
-        if (current.toString() == "." && next.toString() ==".") {
+        if (current.toString() == "." && next.toString() == ".") {
             return true
         }
         return false
@@ -66,7 +66,7 @@ object ValidatorImpl : IValidator {
                 .forEach {
                     if (it < expression.lastIndex) {
                         if (isConcurrentOperator(expression[it], expression[it + 1])) {
-                           return true
+                            return true
                         }
                     }
                 }
@@ -83,7 +83,7 @@ object ValidatorImpl : IValidator {
 
     private fun isOperator(char: Char): Boolean {
         return when {
-        //not sure why I had to toString() but char.equals("+") was not working as expected
+            //not sure why I had to toString() but char.equals("+") was not working as expected
             char.toString() == "+" -> true
             char.toString() == "-" -> true
             char.toString() == "*" -> true

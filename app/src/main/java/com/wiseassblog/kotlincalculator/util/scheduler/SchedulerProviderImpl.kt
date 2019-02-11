@@ -7,7 +7,7 @@ import io.reactivex.schedulers.Schedulers
 /**
  * Created by R_KAY on 12/20/2017.
  */
-object SchedulerProviderImpl: BaseSchedulerProvider {
+object SchedulerProviderImpl : BaseSchedulerProvider {
 
     override fun getComputationScheduler(): Scheduler {
         return Schedulers.computation()

@@ -1,6 +1,5 @@
 package com.wiseassblog.kotlincalculator.view
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -13,7 +12,6 @@ import com.wiseassblog.kotlincalculator.CalculatorActivity
 import com.wiseassblog.kotlincalculator.R
 import com.wiseassblog.kotlincalculator.dependencyinjection.Injector
 import kotlinx.android.synthetic.main.fragment_calculator.*
-
 
 /**
  * Please note: This class uses experimental synthetic layouts from kotlin-android-extensions lib
@@ -42,6 +40,7 @@ class CalculatorFragment : Fragment(), IViewContract.View, View.OnClickListener,
         }
     }
 
+    // TODO: this can be improved by implementing Lifecycle observation
     override fun onStart() {
         super.onStart()
         presenter.bind()
@@ -52,14 +51,13 @@ class CalculatorFragment : Fragment(), IViewContract.View, View.OnClickListener,
         presenter.clear()
     }
 
-
     lateinit var presenter: IViewContract.Presenter
 
     companion object {
-        fun newInstance(injector:Injector) = CalculatorFragment().setPresenter(injector)
+        fun newInstance(injector: Injector) = CalculatorFragment().setPresenter(injector)
     }
 
-    private fun setPresenter(injector:Injector):Fragment{
+    private fun setPresenter(injector: Injector): Fragment {
         presenter = injector.providePresenter(this)
         return this
     }
@@ -118,6 +116,4 @@ class CalculatorFragment : Fragment(), IViewContract.View, View.OnClickListener,
         this.activity.finish()
         startActivity(i)
     }
-
-
 }
