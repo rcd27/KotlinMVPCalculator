@@ -19,6 +19,8 @@ interface IViewContract {
 
         //Get something (Flowable in this case)
         // which will emit a CalcUIModel as soon as it is set (above method)
+        // TODO: RxRelay is very handy for this kind of stuff
+        // see: `com.jakewharton.rxrelay2:rxrelay:2.1.0`
         fun getDisplayStatePublisher(): Flowable<String>
 
         fun getDisplayState(): String
